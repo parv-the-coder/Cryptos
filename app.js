@@ -1,5 +1,5 @@
 const date = () => {
-    let date_main = new Date("March,28,2023,24:00:00");
+    let date_main = new Date("December,28,2023,24:00:00");
     // console.log(date_main);
     let current_date = new Date();
     //  console.log(current_date);
@@ -18,217 +18,203 @@ const date = () => {
 }
 
 
-setInterval(date,1000);
+setInterval(date, 1000);
 
 
-let coin_first=document.getElementById('coin_first');
-let coin=document.getElementById('coin');
-let btc=document.getElementById('btc');
+let coin_first = document.getElementById('coin_first');
+let coin = document.getElementById('coin');
+let btc = document.getElementById('btc');
 
 
-coin.addEventListener('change',()=>
-{
-    let a=coin.value;
-    coin_first.innerText=a.slice(0,1);
+coin.addEventListener('change', () => {
+    let a = coin.value;
+    coin_first.innerText = a.slice(0, 1);
 
-    if (a==="Bitcoin") 
-    {
-        btc.innerText="BTC";
+    if (a === "Bitcoin") {
+        btc.innerText = "BTC";
     }
 
-    else if (a==="Ethereum") 
-    {
-        btc.innerText="ETH";
+    else if (a === "Ethereum") {
+        btc.innerText = "ETH";
     }
 
-    else if (a==="Tether") 
-    {
-        btc.innerText="USDT";
+    else if (a === "Tether") {
+        btc.innerText = "USDT";
     }
 
-    else 
-    {
-        btc.innerText="BNB";
+    else {
+        btc.innerText = "BNB";
     }
 })
 
 
 
-let gov_coins=document.getElementById('gov_coins');
-let coins=document.getElementById('coins');
-let gov_coinss=document.getElementById('gov_coinss');
+let gov_coins = document.getElementById('gov_coins');
+let coins = document.getElementById('coins');
+let gov_coinss = document.getElementById('gov_coinss');
 
 
-coins.addEventListener('change',()=>
-{
-    let a=coins.value;
-    gov_coins.innerText=a.slice(0,1);
+coins.addEventListener('change', () => {
+    let a = coins.value;
+    gov_coins.innerText = a.slice(0, 1);
 
-    if (a==="Dollar") 
-    {
-        gov_coins.innerText="$";
-        gov_coinss.innerText="USD";
+    if (a === "Dollar") {
+        gov_coins.innerText = "$";
+        gov_coinss.innerText = "USD";
     }
 
-    else if (a==="Rupee") 
-    {
-        gov_coins.innerText="₹";
-        gov_coinss.innerText="INR";
+    else if (a === "Rupee") {
+        gov_coins.innerText = "₹";
+        gov_coinss.innerText = "INR";
     }
 
-    else if (a==="Riyal") 
-    {
-        gov_coins.innerText="S";
-        gov_coinss.innerText="SAR";
+    else if (a === "Riyal") {
+        gov_coins.innerText = "S";
+        gov_coinss.innerText = "SAR";
     }
 
-    else 
-    {
-        gov_coins.innerText="A";
-        gov_coinss.innerText="AED";
+    else {
+        gov_coins.innerText = "A";
+        gov_coinss.innerText = "AED";
     }
 })
 
 
-let crypto=document.getElementById('crypto');
-let gov=document.getElementById('gov');
+let crypto = document.getElementById('crypto');
+let gov = document.getElementById('gov');
 
-let bitcoin_dollar=19974.45;
-let Ethereum_dollar=1349.85;
-let Tether_dollar=1;
-let bnb_dollar=291.55;
+let bitcoin_dollar = 19974.45;
+let Ethereum_dollar = 1349.85;
+let Tether_dollar = 1;
+let bnb_dollar = 291.55;
 
 
-crypto.addEventListener('change',()=>
-{
+crypto.addEventListener('change', () => {
     switch ("Bitcoin") {
         case coin.value:
 
-        switch ("Dollar") {
-            case coins.value:
-                gov.value=(crypto.value)*bitcoin_dollar;
-                break;
-        }
-            
-        switch ("Rupee") {
-            case coins.value:
-                gov.value=(crypto.value)*(bitcoin_dollar*81);
-                break;
-        }
-            
-        switch ("Riyal") {
-            case coins.value:
-                gov.value=(crypto.value)*(bitcoin_dollar*3.76);
-                break;
-        }
-            
-        switch ("Dirham") {
-            case coins.value:
-                gov.value=(crypto.value)*(bitcoin_dollar*3.67);
-                break;
-        }
+            switch ("Dollar") {
+                case coins.value:
+                    gov.value = (crypto.value) * bitcoin_dollar;
+                    break;
+            }
+
+            switch ("Rupee") {
+                case coins.value:
+                    gov.value = (crypto.value) * (bitcoin_dollar * 81);
+                    break;
+            }
+
+            switch ("Riyal") {
+                case coins.value:
+                    gov.value = (crypto.value) * (bitcoin_dollar * 3.76);
+                    break;
+            }
+
+            switch ("Dirham") {
+                case coins.value:
+                    gov.value = (crypto.value) * (bitcoin_dollar * 3.67);
+                    break;
+            }
             break;
     }
 }
 )
 
 
-crypto.addEventListener('change',()=>
-{
+crypto.addEventListener('change', () => {
     switch ("Ethereum") {
         case coin.value:
 
-        switch ("Dollar") {
-            case coins.value:
-                gov.value=(crypto.value)*Ethereum_dollar;
-                break;
-        }
-            
-        switch ("Rupee") {
-            case coins.value:
-                gov.value=(crypto.value)*(Ethereum_dollar*81);
-                break;
-        }
-            
-        switch ("Riyal") {
-            case coins.value:
-                gov.value=(crypto.value)*(Ethereum_dollar*3.76);
-                break;
-        }
-            
-        switch ("Dirham") {
-            case coins.value:
-                gov.value=(crypto.value)*(Ethereum_dollar*3.67);
-                break;
-        }
+            switch ("Dollar") {
+                case coins.value:
+                    gov.value = (crypto.value) * Ethereum_dollar;
+                    break;
+            }
+
+            switch ("Rupee") {
+                case coins.value:
+                    gov.value = (crypto.value) * (Ethereum_dollar * 81);
+                    break;
+            }
+
+            switch ("Riyal") {
+                case coins.value:
+                    gov.value = (crypto.value) * (Ethereum_dollar * 3.76);
+                    break;
+            }
+
+            switch ("Dirham") {
+                case coins.value:
+                    gov.value = (crypto.value) * (Ethereum_dollar * 3.67);
+                    break;
+            }
             break;
     }
 }
 )
 
 
-crypto.addEventListener('change',()=>
-{
+crypto.addEventListener('change', () => {
     switch ("Tether") {
         case coin.value:
 
-        switch ("Dollar") {
-            case coins.value:
-                gov.value=(crypto.value)*Tether_dollar;
-                break;
-        }
-            
-        switch ("Rupee") {
-            case coins.value:
-                gov.value=(crypto.value)*(Tether_dollar*81);
-                break;
-        }
-            
-        switch ("Riyal") {
-            case coins.value:
-                gov.value=(crypto.value)*(Tether_dollar*3.76);
-                break;
-        }
-            
-        switch ("Dirham") {
-            case coins.value:
-                gov.value=(crypto.value)*(Tether_dollar*3.67);
-                break;
-        }
+            switch ("Dollar") {
+                case coins.value:
+                    gov.value = (crypto.value) * Tether_dollar;
+                    break;
+            }
+
+            switch ("Rupee") {
+                case coins.value:
+                    gov.value = (crypto.value) * (Tether_dollar * 81);
+                    break;
+            }
+
+            switch ("Riyal") {
+                case coins.value:
+                    gov.value = (crypto.value) * (Tether_dollar * 3.76);
+                    break;
+            }
+
+            switch ("Dirham") {
+                case coins.value:
+                    gov.value = (crypto.value) * (Tether_dollar * 3.67);
+                    break;
+            }
             break;
     }
 }
 )
 
 
-crypto.addEventListener('change',()=>
-{
+crypto.addEventListener('change', () => {
     switch ("BNB") {
         case coin.value:
 
-        switch ("Dollar") {
-            case coins.value:
-                gov.value=(crypto.value)*bnb_dollar;
-                break;
-        }
-            
-        switch ("Rupee") {
-            case coins.value:
-                gov.value=(crypto.value)*(bnb_dollar*81);
-                break;
-        }
-            
-        switch ("Riyal") {
-            case coins.value:
-                gov.value=(crypto.value)*(bnb_dollar*3.76);
-                break;
-        }
-            
-        switch ("Dirham") {
-            case coins.value:
-                gov.value=(crypto.value)*(bnb_dollar*3.67);
-                break;
-        }
+            switch ("Dollar") {
+                case coins.value:
+                    gov.value = (crypto.value) * bnb_dollar;
+                    break;
+            }
+
+            switch ("Rupee") {
+                case coins.value:
+                    gov.value = (crypto.value) * (bnb_dollar * 81);
+                    break;
+            }
+
+            switch ("Riyal") {
+                case coins.value:
+                    gov.value = (crypto.value) * (bnb_dollar * 3.76);
+                    break;
+            }
+
+            switch ("Dirham") {
+                case coins.value:
+                    gov.value = (crypto.value) * (bnb_dollar * 3.67);
+                    break;
+            }
             break;
     }
 }
